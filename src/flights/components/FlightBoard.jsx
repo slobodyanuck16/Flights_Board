@@ -31,7 +31,7 @@ function FlightBoard({ flights, getFlightList }) {
     return (
         <>
             <div className="flight-list-buttons-container">
-                <Link
+                <Link className="departures-link"
                     to={
                         search.length > 8
                             ? `/departures${search}`
@@ -51,7 +51,7 @@ function FlightBoard({ flights, getFlightList }) {
                         DEPARTURES
                     </button>
                 </Link>
-                <Link
+                <Link className="arrivals-link"
                     to={search.length > 8 ? `/arrivals${search}` : `/arrivals`}
                 >
                     <button

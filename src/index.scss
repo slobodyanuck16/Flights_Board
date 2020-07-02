@@ -67,7 +67,6 @@ input {
 
 .departure-btn {
   position: relative;
-  left: 5vw;
   width: 50vw;
   height: 60px;
   border-radius: 100px 0px 0px 0px;
@@ -98,7 +97,6 @@ a {
 
 .arrival-btn {
   position: relative;
-  right: 5vw;
   width: 50vw;
   height: 60px;
   border-radius: 0px 100px 0px 0px;
@@ -115,6 +113,13 @@ a {
   &:hover {
     background-color: rgba(176, 58, 255, 1);
   }
+}
+
+.arrivals-link {
+  right: 5vw;
+}
+.departures-link {
+  left: 5vw;
 }
 
 .nav-btn-selected {
