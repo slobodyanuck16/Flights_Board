@@ -50,6 +50,7 @@ input {
     font-weight: 600;
     font-size: 30px;
     padding-right: 35px;
+    cursor: pointer;
     &:hover {
       border-radius: 0px 50px 0px 0px;
     }
@@ -80,6 +81,7 @@ input {
   justify-content: flex-end;
   padding-right: 155px;
   transition: all 0.4s ease;
+  cursor: pointer;
   &:hover {
     background-color: rgba(176, 58, 255, 1);
   }
@@ -110,6 +112,7 @@ a {
   justify-content: flex-start;
   padding-left: 155px;
   transition: all 0.4s ease;
+  cursor: pointer;
   &:hover {
     background-color: rgba(176, 58, 255, 1);
   }
@@ -117,9 +120,11 @@ a {
 
 .arrivals-link {
   right: 5vw;
+  border-radius: 100px 100px 0px 0px;
 }
 .departures-link {
   left: 5vw;
+  border-radius: 100px 100px 0px 0px;
 }
 
 .nav-btn-selected {
@@ -129,6 +134,7 @@ a {
   color: blueviolet;
   z-index: 2;
   border-radius: 100px 100px 0px 0px;
+  cursor: pointer;
   &:hover {
     background-color: white;
   }
