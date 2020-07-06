@@ -1,15 +1,6 @@
 import { fetchFlightList } from "./flight.gateway";
-// import { flightListSeletor } from "./flights.selectors";
 
 export const FLIGHT_LIST_RECEIVED = "FLIGHTS/FLIGHT_LIST_RECEIVED";
-// export const FLIGHT_LIST_REQUESTED = "FLIGHT_LIST_REQUESTED";
-
-// export const flightListRequested = () => {
-//     return {
-//         type: FLIGHT_LIST_REQUESTED,
-//         isLoadging: true,
-//     }
-// }
 
 export const flightListReceived = (flightList) => {
     return {
@@ -17,8 +8,6 @@ export const flightListReceived = (flightList) => {
         payload: {
             flightList,
         },
-        // isLoadging: false
-        
     };
 };
 

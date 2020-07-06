@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {  useEffect } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 
 import FlightList from "./FlightList";
@@ -15,8 +15,8 @@ function FlightBoard({ flights, getFlightList }) {
     }, []);
 
     const { direction } = useParams();
-
     const { search } = useLocation();
+
     const flightsList =
         flights[direction === "arrivals" ? "arrival" : "departure"] || [];
     const filterText = qs.parse(search, { ignoreQueryPrefix: true }).search;

@@ -1,4 +1,4 @@
-import { FLIGHT_LIST_RECEIVED, FLIGHT_LIST_REQUESTED } from "./flight.actions";
+import { FLIGHT_LIST_RECEIVED } from "./flight.actions";
 
 const initialState = {
     flightList: {},
@@ -6,8 +6,6 @@ const initialState = {
 
 const flightReducer = (state = initialState, action) => {
     switch (action.type) {
-        // case FLIGHT_LIST_REQUESTED:
-        //     return initialState
         case FLIGHT_LIST_RECEIVED: {
             return {
                 ...state,

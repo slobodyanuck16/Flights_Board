@@ -3,9 +3,6 @@ import React from "react";
 import moment from "moment";
 
 const FlightList = ({ flights, direction }) => {
-    console.log("flights in FlightList: ", flights);
-    console.log("direction: ", direction);
-
     return (
         <>
             {flights.map((flight) => {

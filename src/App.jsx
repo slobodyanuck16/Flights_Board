@@ -4,18 +4,16 @@ import SearchFlightInput from "./flights/components/SearchFlightInput";
 import FlightBoard from "./flights/components/FlightBoard";
 import { connect } from "react-redux";
 import { flightListSelector } from "./flights/flight.selectors.js";
-import { useParams, Switch, Route, Redirect } from "react-router-dom";
-import PropTypes, { exact } from "prop-types";
+import { Switch, Route, Redirect } from "react-router-dom";
+import PropTypes from "prop-types";
 
 function App({ getFlightList, flights }) {
-    const { direction } = useParams();
-
     return (
         <>
             <div className="flight-board-container">
                 <div className="search-flight-container">
                     <h1 className="title">SEARCH FLIGHT</h1>
-                    <SearchFlightInput direction={direction} />
+                    <SearchFlightInput />
                 </div>
             </div>
             <Switch>
