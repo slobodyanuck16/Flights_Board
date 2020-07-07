@@ -1,4 +1,4 @@
-import React, {  useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
 
 import FlightList from "./FlightList";
@@ -6,6 +6,8 @@ import NoFlights from "./NoFlights";
 
 import qs from "qs";
 import moment from "moment";
+
+import "./flight-board.scss";
 
 function FlightBoard({ flights, getFlightList }) {
     useEffect(() => {
@@ -31,7 +33,8 @@ function FlightBoard({ flights, getFlightList }) {
     return (
         <>
             <div className="flight-list-buttons-container">
-                <Link className="departures-link"
+                <Link
+                    className="departures-link"
                     to={
                         search.length > 8
                             ? `/departures${search}`
@@ -51,7 +54,8 @@ function FlightBoard({ flights, getFlightList }) {
                         DEPARTURES
                     </button>
                 </Link>
-                <Link className="arrivals-link"
+                <Link
+                    className="arrivals-link"
                     to={search.length > 8 ? `/arrivals${search}` : `/arrivals`}
                 >
                     <button

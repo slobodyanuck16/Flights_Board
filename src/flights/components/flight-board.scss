@@ -1,0 +1,77 @@
+.flight-list-buttons-container {
+    display: flex;
+    justify-content: center;
+    width: 90vw;
+    margin: auto;
+    margin-top: 40px;
+    transition: all 0.4s ease;
+}
+
+.departure-btn {
+    position: relative;
+    width: 50vw;
+    height: 60px;
+    border-radius: 100px 0px 0px 0px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(176, 58, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 155px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(176, 58, 255, 1);
+    }
+}
+
+.arrival-btn {
+    position: relative;
+    width: 50vw;
+    height: 60px;
+    border-radius: 0px 100px 0px 0px;
+    border: none;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(176, 58, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 155px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(176, 58, 255, 1);
+    }
+}
+
+.btn-icons {
+    font-size: 40px;
+    margin-right: 15px;
+}
+
+.arrivals-link {
+    right: 5vw;
+    border-radius: 100px 100px 0px 0px;
+}
+.departures-link {
+    left: 5vw;
+    border-radius: 100px 100px 0px 0px;
+}
+
+.nav-btn-selected {
+    background-color: white;
+    font-size: 30px;
+    font-weight: 600;
+    color: blueviolet;
+    z-index: 2;
+    border-radius: 100px 100px 0px 0px;
+    cursor: pointer;
+    &:hover {
+        background-color: white;
+    }
+}

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import './search-flight-input.scss';
 
 function SearchFlightInput() {
     const location = useLocation(); 
 
     const [flightID, setflightID] = useState(
         location.search.length > 8 ? `${location.search.substr(8, 100)}` : ""
-    ); // TODO: или пустая строка или значение с инпута(с query)
+    );
 
     return (
         <div className="search-fligths">

@@ -1,6 +1,7 @@
 import React from "react";
-
 import moment from "moment";
+
+import './flight-list.scss';
 
 const FlightList = ({ flights, direction }) => {
     return (
