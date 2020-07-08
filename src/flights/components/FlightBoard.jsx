@@ -1,11 +1,16 @@
 import React, { useEffect } from "react";
 import { Link, useParams, useLocation } from "react-router-dom";
+import { connect } from "react-redux";
+
+import * as flightActions from "../flight.actions";
+import { flightListSelector } from "../flight.selectors.js";
 
 import FlightList from "./FlightList";
 import NoFlights from "./NoFlights";
 
 import qs from "qs";
 import moment from "moment";
+import PropTypes from "prop-types";
 
 import "./flight-board.scss";
 
@@ -44,7 +49,7 @@ function FlightBoard({ flights, getFlightList }) {
                     <button
                         className={
                             direction === "departures"
-                                ? "departure-btn nav-btn-selected"
+                                ? "departure-btn_selected"
                                 : "departure-btn"
                         }
                     >
@@ -61,7 +66,7 @@ function FlightBoard({ flights, getFlightList }) {
                     <button
                         className={
                             direction === "arrivals"
-                                ? "arrival-btn nav-btn-selected"
+                                ? "arrival-btn_selected"
                                 : "arrival-btn"
                         }
                     >
@@ -100,4 +105,19 @@ function FlightBoard({ flights, getFlightList }) {
     );
 }
 
-export default FlightBoard;
+FlightBoard.propTypes = {
+    flights: PropTypes.shape().isRequired,
+    getFlightList: PropTypes.func.isRequired,
+};
+
+const mapState = (state) => {
+    return {
+        flights: flightListSelector(state),
+    };
+};
+
+const mapDispatch = {
+    getFlightList: flightActions.getFlightList,
+};
+
+export default connect(mapState, mapDispatch)(FlightBoard);

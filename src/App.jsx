@@ -1,13 +1,9 @@
-import * as flightActions from "./flights/flight.actions";
 import React from "react";
 import SearchFlightInput from "./flights/components/SearchFlightInput";
 import FlightBoard from "./flights/components/FlightBoard";
-import { connect } from "react-redux";
-import { flightListSelector } from "./flights/flight.selectors.js";
 import { Switch, Route, Redirect } from "react-router-dom";
-import PropTypes from "prop-types";
 
-function App({ getFlightList, flights }) {
+function App() {
     return (
         <>
             <div className="flight-board-container">
@@ -18,10 +14,7 @@ function App({ getFlightList, flights }) {
             </div>
             <Switch>
                 <Route exact path="/:direction">
-                    <FlightBoard
-                        getFlightList={getFlightList}
-                        flights={flights}
-                    />
+                    <FlightBoard />
                 </Route>
                 <Redirect to="/arrivals" />
             </Switch>
@@ -29,19 +22,4 @@ function App({ getFlightList, flights }) {
     );
 }
 
-App.propTypes = {
-    flights: PropTypes.shape().isRequired,
-    getFlightList: PropTypes.func.isRequired,
-};
-
-const mapState = (state) => {
-    return {
-        flights: flightListSelector(state),
-    };
-};
-
-const mapDispatch = {
-    getFlightList: flightActions.getFlightList,
-};
-
-export default connect(mapState, mapDispatch)(App);
+export default App;
